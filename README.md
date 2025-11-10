@@ -66,7 +66,7 @@ GPU_CHECK_INTERVAL = 10        # Seconds between GPU checks
 
 # GPU Process Management
 IDLE_NvGPU_PROCESSES = ['t-rex', 'trex', 'miner', 'xmrig', 'lolminer', 'nbminer']
-KNOWN_NvidiaGPU_PROCESSES = ['Xorg']  
+KNOWN_NvGPU_PROCESSES = ['Xorg']  
 IDLE_CONTAINER_ID = "120"      # LXC container ID of idle GPU workload
 Blackout_schedule_Start = 2, 15 #when to start stopping the idle NvGPU container. Hour, Minute.
 Blackout_schedule_End = 3, 30 #when to allow starting the idle NvGPU container again. Hour, Minute.

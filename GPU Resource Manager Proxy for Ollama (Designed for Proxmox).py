@@ -21,7 +21,7 @@ GPU_CHECK_INTERVAL = 10  # seconds it wait's to check for other process apart fr
 
 # process process patterns (from your nvidia-smi output)
 IDLE_NvGPU_PROCESSES = ['t-rex', 'trex', 'miner', 'xmrig', 'lolminer', 'nbminer']
-KNOWN_NvidiaGPU_PROCESSES = ['Xorg']  # Processes that are allowed when "idle" compute process is running
+KNOWN_NvGPU_PROCESSES = ['Xorg']  # Processes that are allowed when "idle" compute process is running
 IDLE_CONTAINER_ID = "" # running Idle GPU Container ID, example: COMPUTE_CONTAINER_ID ="120"
 Blackout_schedule_Start = 2, 15 #when to start stopping the idle NvGPU container.
 Blackout_schedule_End = 3, 30 #when to allow starting the idle NvGPU container again.
