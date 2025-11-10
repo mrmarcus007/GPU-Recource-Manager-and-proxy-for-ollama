@@ -134,7 +134,7 @@ class GPUResourceManager:
         return False
 
     def is_known_system_process(self, process_name):
-        return any(sys_proc in process_name for sys_proc in KNOWN_NvidiaGPU_PROCESSES)
+        return any(sys_proc in process_name for sys_proc in KNOWN_NvGPU_PROCESSES)
 
     def is_gpu_idle(self):
         processes = self.get_gpu_processes()
