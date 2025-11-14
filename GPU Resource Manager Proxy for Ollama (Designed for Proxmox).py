@@ -340,7 +340,6 @@ class OllamaProxyHandler(http.server.SimpleHTTPRequestHandler):
                     self.send_error(502, f"Bad gateway: {e}")
             except Exception:
                 pass
-
     def log_message(self, format, *args):
         logging.info(f"{self.address_string()} - {format % args}")
 class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
