@@ -24,7 +24,6 @@ GPU_CHECK_INTERVAL = 10  # seconds it waits to check for other process apart fro
 IDLE_NvGPU_PROCESSES = ['t-rex', 'trex', 'miner', 'xmrig', 'lolminer', 'nbminer']
 KNOWN_NvGPU_PROCESSES = ['Xorg']  # Processes that are allowed when "idle" compute process is running
 IDLE_CONTAINER_ID = ""  # running Idle GPU Container ID, example: COMPUTE_CONTAINER_ID ="120"
-# Maintenance window (dt_time objects)
 Blackout_schedule_Start = dt_time(2, 15)  # 2:15 AM
 Blackout_schedule_End = dt_time(3, 30)    # 3:30 AM
 
