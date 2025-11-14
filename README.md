@@ -1,5 +1,5 @@
 # GPU Resource Manager & Proxy for Ollama  
-*A smart GPU-aware proxy for Proxmox VE that dynamically manages GPU resources between Ollama and GPU-intensive background processes.*
+*A smart GPU-aware proxy designed for Proxmox VE that dynamically manages GPU resources between Ollama and GPU-intensive background processes.*
 
 ---
 
