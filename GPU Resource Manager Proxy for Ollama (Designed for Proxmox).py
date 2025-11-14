@@ -314,6 +314,12 @@ class OllamaProxyHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(500, f"Internal server error: {e}")
 
     def _is_gpu_intensive_operation(self, path, request_data):
+        if path == '/api/generate' and request_data.get('keep_alive') == 0:
+            logging.debug("Detected model unload request via /api/generate")
+            return False
+        if path == '/api/chat' and request_data.get('keep_alive') == 0 and request_data.get('messages') == []:
+            logging.debug("Detected model unload request via /api/chat")
+            return False
         if path in ['/api/generate', '/api/chat', '/api/embeddings']:
             return True
         if path == '/api/load':
