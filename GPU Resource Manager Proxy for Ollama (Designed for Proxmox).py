@@ -86,7 +86,6 @@ class GPUResourceManager:
                 while not self.is_container_running(container_id) and waited < max_wait:
                     time.sleep(1)
                     waited += 1
-
                 if self.is_container_running(container_id):
                     logging.info(f"Container {container_id} started successfully")
                     return True
