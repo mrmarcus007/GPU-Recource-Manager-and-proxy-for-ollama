@@ -63,7 +63,6 @@ class GPUResourceManager:
                 while self.is_container_running(container_id) and waited < max_wait:
                     time.sleep(1)
                     waited += 1
-
                 if not self.is_container_running(container_id):
                     logging.info(f"Container {container_id} stopped successfully")
                     return True
@@ -233,7 +232,6 @@ class GPUResourceManager:
                 except Exception as e:
                     logging.error(f"Error in monitor loop: {e}")
                 time.sleep(GPU_CHECK_INTERVAL)
-
         monitor_thread = threading.Thread(target=monitor_loop, daemon=True)
         monitor_thread.start()
         logging.info("GPU monitoring thread started")
@@ -298,7 +296,6 @@ class OllamaProxyHandler(http.server.SimpleHTTPRequestHandler):
         for header in list(headers.keys()):
             if header.lower() in hop_headers:
                 headers.pop(header, None)
-
         headers.pop('Host', None)
         timeout = (10, None)
         try:
